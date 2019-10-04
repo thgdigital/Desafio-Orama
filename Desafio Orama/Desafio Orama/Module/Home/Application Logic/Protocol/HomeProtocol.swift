@@ -9,6 +9,7 @@
 import Foundation
 
 protocol HomePresenterInput {
+    var finishPagination: Bool { get set }
     func viewDidLoad()
     func refresh()
     func paginate()
@@ -29,11 +30,11 @@ protocol HomeInteractorInput {
     var page: UInt { get set }
     func fetch()
     func fetchPaginate()
-    
 }
 
 protocol HomeInteractorOutput: class {
     func fetched(entites: [HomeEntity])
     func fetched(paginate items: [HomeEntity])
     func error(with error: ErrorType)
+    func finish()
 }

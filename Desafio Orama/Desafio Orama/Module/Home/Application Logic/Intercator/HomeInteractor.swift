@@ -56,7 +56,12 @@ class HomeInteractor: HomeInteractorInput {
     
     func fetchPaginate() {
          let items = self.getPageItems(page: self.page, allItems: self.entites, maxItemsPerPage: self.limit)
-        output?.fetched(paginate: items)
+        if items.count > 0 {
+             output?.fetched(paginate: items)
+        } else {
+            output?.finish()
+        }
+       
     }
 }
 

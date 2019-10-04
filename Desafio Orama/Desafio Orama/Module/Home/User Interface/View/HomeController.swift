@@ -51,14 +51,15 @@ extension HomeController: HomePresenterOutput {
     func fetched(items: [HomeItem]) {
         self.items = items
         collectionView.reloadData()
-        
     }
     
     func fetched(paginate items: [HomeItem]) {
         self.items = items
-        collectionView.reloadItemsInSection(sectionIndex: 0, newCount: items.count) {
+        collectionView.reloadItemsInSection(sectionIndex: 0, newCount: self.items.count) {
             let indexPathsForVisibleItems = self.collectionView.indexPathsForVisibleItems
-            self.collectionView.reloadItems(at: indexPathsForVisibleItems)
+            if !self.presenter.finishPagination {
+                self.collectionView.reloadItems(at: indexPathsForVisibleItems)
+            }
         }
     }
     
@@ -105,12 +106,17 @@ extension HomeController:  UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if items[indexPath.row] is LoadingItem, presenter.finishPagination  {
+            return .zero
+        }
+        
         let height = view.frame.height / 6
         return CGSize(width: view.frame.width - CGFloat(20), height: height)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if cell is LoadingCell {
+        if cell is LoadingCell, !presenter.finishPagination {
             presenter.paginate()
         }
     }

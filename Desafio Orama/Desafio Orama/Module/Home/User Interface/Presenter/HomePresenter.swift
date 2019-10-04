@@ -9,7 +9,8 @@
 import Foundation
 
 class HomePresenter : HomePresenterInput {
-
+    var finishPagination: Bool = false
+    
     weak var output: HomePresenterOutput?
     
     var wireframe: HomeWireframe
@@ -52,7 +53,7 @@ extension HomePresenter: HomeInteractorOutput {
     func fetched(paginate entites: [HomeEntity]) {
         let paginateItems = entites.map({ HomeEntityMapper.make(entity: $0)})
         items.append(contentsOf: paginateItems)
-        items = items.filter({ !($0 is LoadingItem) })
+        items = filterLoading()
         items.append(loadingItem)
         output?.fetched(paginate: items)
     }
@@ -62,6 +63,16 @@ extension HomePresenter: HomeInteractorOutput {
         items = entites.map({ HomeEntityMapper.make(entity: $0)})
         items.append(loadingItem)
         output?.fetched(items: items)
-        
+    }
+    
+    func finish() {
+        items = filterLoading()
+        finishPagination = true
+        output?.fetched(paginate: items)
+    }
+    
+    func filterLoading() -> [HomeItem] {
+        items = items.filter({ !($0 is LoadingItem) })
+       return items
     }
 }
