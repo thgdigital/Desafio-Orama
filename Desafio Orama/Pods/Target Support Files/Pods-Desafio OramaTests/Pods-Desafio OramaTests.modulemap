@@ -1,0 +1,6 @@
+framework module Pods_Desafio_OramaTests {
+  umbrella header "Pods-Desafio OramaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
