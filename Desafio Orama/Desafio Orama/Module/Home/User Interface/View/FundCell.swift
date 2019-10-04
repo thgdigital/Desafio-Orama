@@ -20,7 +20,13 @@ class FundCell: UICollectionViewCell {
         borderView.backgroundColor = color
         titleLabel.text = display.name
         currencyLabel.text = display.currency
+        percentLabel.text = display.riskProfile
     }
 
-    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = ""
+        currencyLabel.text = ""
+        percentLabel.text = ""
+    }
 }

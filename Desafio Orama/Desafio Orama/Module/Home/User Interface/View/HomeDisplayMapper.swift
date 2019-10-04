@@ -12,7 +12,16 @@ class HomeDisplayMapper {
     static func make(item: HomeItem) -> HomeDisplay {
         let display = HomeDisplay()
         display.name = item.simpleName
-        display.currency = "R$ \(item.minimumInitialApplicationAmount)"
+        var currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale(identifier: "pt_BR")
+        if let currency = Float(item.minimumInitialApplicationAmount),
+            let priceString = currencyFormatter.string(from: NSNumber(value: currency) ) {
+            display.currency = priceString
+        }
+        
+        display.riskProfile = item.fundRiskProfile
         return display
     }
 }
