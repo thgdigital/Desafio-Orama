@@ -12,7 +12,7 @@ class HomeDisplayMapper {
     static func make(item: HomeItem) -> HomeDisplay {
         let display = HomeDisplay()
         display.name = item.simpleName
-        var currencyFormatter = NumberFormatter()
+        let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true
         currencyFormatter.numberStyle = .currency
         currencyFormatter.locale = Locale(identifier: "pt_BR")
