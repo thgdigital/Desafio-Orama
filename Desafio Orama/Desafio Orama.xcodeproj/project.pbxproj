@@ -45,6 +45,8 @@
 		AF64E0CC234BB35C00C93585 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF64E0CA234BB35C00C93585 /* DetailCell.xib */; };
 		AF64E0CE234BB63400C93585 /* DetailDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0CD234BB63400C93585 /* DetailDisplay.swift */; };
 		AF64E0D0234BB78C00C93585 /* DescriptionsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */; };
+		AF64E0D3234BD23200C93585 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D2234BD23200C93585 /* LoginInteractor.swift */; };
+		AF64E0D5234BD29600C93585 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D4234BD29600C93585 /* LoginManager.swift */; };
 		AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFD234673E300D138BB /* AppDelegate.swift */; };
 		AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFF234673E300D138BB /* SceneDelegate.swift */; };
 		AFF40E02234673E300D138BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E01234673E300D138BB /* HomeController.swift */; };
@@ -108,6 +110,8 @@
 		AF64E0CA234BB35C00C93585 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		AF64E0CD234BB63400C93585 /* DetailDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDisplay.swift; sourceTree = "<group>"; };
 		AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionsSections.swift; sourceTree = "<group>"; };
+		AF64E0D2234BD23200C93585 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		AF64E0D4234BD29600C93585 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		AFF40DFA234673E300D138BB /* Desafio Orama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Orama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF40DFD234673E300D138BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF40DFF234673E300D138BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,9 +162,9 @@
 		AF60A57E234676D900E0488A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AF60A59023467C5A00E0488A /* Commom */,
 				AF60A5B9234A172E00E0488A /* Detail */,
 				AF60A599234683F900E0488A /* Helper */,
-				AF60A59023467C5A00E0488A /* Commom */,
 				AF60A57F234676F000E0488A /* Home */,
 			);
 			path = Module;
@@ -248,6 +252,7 @@
 		AF60A59023467C5A00E0488A /* Commom */ = {
 			isa = PBXGroup;
 			children = (
+				AF64E0D1234BD21D00C93585 /* Interactor */,
 				AF60A5B22347D0F200E0488A /* View */,
 				AF60A59423467E7F00E0488A /* Model */,
 				AF60A59123467C6000E0488A /* Manager */,
@@ -259,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				AF60A59223467CAF00E0488A /* RequestManager.swift */,
+				AF64E0D4234BD29600C93585 /* LoginManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -375,6 +381,14 @@
 				AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		AF64E0D1234BD21D00C93585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AF64E0D2234BD23200C93585 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		AFF40DF1234673E300D138BB = {
@@ -618,6 +632,7 @@
 				AF60A5AF23478F5700E0488A /* HomeDisplay.swift in Sources */,
 				AFF40E02234673E300D138BB /* HomeController.swift in Sources */,
 				AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */,
+				AF64E0D3234BD23200C93585 /* LoginInteractor.swift in Sources */,
 				AF60A598234680E900E0488A /* HomeEntity.swift in Sources */,
 				AF60A59323467CAF00E0488A /* RequestManager.swift in Sources */,
 				AF64E0C4234B8A6000C93585 /* ThumbnailCell.swift in Sources */,
@@ -628,6 +643,7 @@
 				AF60A5A9234779BF00E0488A /* Helper.swift in Sources */,
 				AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */,
 				AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */,
+				AF64E0D5234BD29600C93585 /* LoginManager.swift in Sources */,
 				AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */,
 				AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */,
 				AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */,

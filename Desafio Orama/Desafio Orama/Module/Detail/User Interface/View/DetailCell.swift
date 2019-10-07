@@ -27,4 +27,9 @@ class DetailCell: CollectionViewCell {
         descriptionsLabel.text = display.descriptionManager
         dateLabel.text = display.date
     }
+    
+    
+    @IBAction func tapCompra(_ sender: Any) {
+        delegate?.didTapCompra()
+    }
 }

@@ -17,7 +17,10 @@ class SectionsMapper {
             sections.append(SectionsThumbnail(item: item))
         }
         
-        sections.append(DescriptionsSections(item: item))
+        
+        let loginInteractor = LoginInteractor(manager: LoginManager())
+        
+        sections.append(DescriptionsSections(interactor: loginInteractor, item: item))
         
         return sections
     }

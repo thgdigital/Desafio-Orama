@@ -53,6 +53,9 @@
                         </constraints>
                         <color key="tintColor" red="0.031372549020000001" green="0.61176470589999998" blue="0.62352941179999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <state key="normal" title="Comprar"/>
+                        <connections>
+                            <action selector="tapCompra:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DVU-Sd-6ck"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

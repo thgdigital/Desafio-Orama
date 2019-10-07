@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol CollectionViewDelegate: class {
+    func didTapCompra()
+}
+
 class CollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: CollectionViewDelegate?
 
     @IBOutlet weak var cellWidthConstraint: NSLayoutConstraint?
     
