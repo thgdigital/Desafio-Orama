@@ -42,6 +42,11 @@ class HomePresenter : HomePresenterInput {
             interactor.fetchPaginate()
         }
     }
+    
+    func didSelected(with index: Int) {
+        var item = DetailItem(homeItem: items[index])
+        wireframe.showDetail(detailItem: item)
+    }
 }
 
 extension HomePresenter: HomeInteractorOutput {

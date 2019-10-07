@@ -17,8 +17,9 @@ class HomeEntityMapper {
         entity.fundRiskProfile = model.specification.fundRiskProfile.name.rawValue
         entity.initialDate = model.initialDate
         entity.minimumInitialApplicationAmount = model.operability.minimumInitialApplicationAmount
-        if let thumbnail = model.strategyVideo?.thumbnail {
+        if let thumbnail = model.strategyVideo?.thumbnail, let url = model.strategyVideo?.url {
             entity.thumbnailVideo = thumbnail
+            entity.urlVideo = url
         }
        
         return entity
@@ -32,6 +33,7 @@ class HomeEntityMapper {
         item.initialDate = entity.initialDate
         item.minimumInitialApplicationAmount = entity.minimumInitialApplicationAmount
         item.thumbnailVideo = entity.thumbnailVideo
+        item.urlVideo = entity.urlVideo
         return item
     }
 }

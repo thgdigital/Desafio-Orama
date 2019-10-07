@@ -15,4 +15,5 @@ class HomeItem {
     var minimumInitialApplicationAmount: String = ""
     var fundRiskProfile: String = ""
     var thumbnailVideo: String = ""
+    var urlVideo: String = ""
 }

@@ -28,6 +28,12 @@
 		AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5B32347D16C00E0488A /* LoadingCell.swift */; };
 		AF60A5B62347D16C00E0488A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF60A5B42347D16C00E0488A /* LoadingCell.xib */; };
 		AF60A5B82347D1A600E0488A /* LoadingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5B72347D1A600E0488A /* LoadingItem.swift */; };
+		AF60A5BF234A187900E0488A /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5BE234A187700E0488A /* DetailProtocol.swift */; };
+		AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C0234A19CA00E0488A /* DetailIteractor.swift */; };
+		AF60A5C6234A1A1400E0488A /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C5234A1A1400E0488A /* DetailController.swift */; };
+		AF60A5C8234A1A8100E0488A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C7234A1A8100E0488A /* DetailPresenter.swift */; };
+		AF60A5CA234A1A9900E0488A /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C9234A1A9900E0488A /* DetailWireframe.swift */; };
+		AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5CB234A20DD00E0488A /* DetailItem.swift */; };
 		AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFD234673E300D138BB /* AppDelegate.swift */; };
 		AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFF234673E300D138BB /* SceneDelegate.swift */; };
 		AFF40E02234673E300D138BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E01234673E300D138BB /* HomeController.swift */; };
@@ -74,6 +80,12 @@
 		AF60A5B32347D16C00E0488A /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		AF60A5B42347D16C00E0488A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		AF60A5B72347D1A600E0488A /* LoadingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingItem.swift; sourceTree = "<group>"; };
+		AF60A5BE234A187700E0488A /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		AF60A5C0234A19CA00E0488A /* DetailIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIteractor.swift; sourceTree = "<group>"; };
+		AF60A5C5234A1A1400E0488A /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		AF60A5C7234A1A8100E0488A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		AF60A5C9234A1A9900E0488A /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
+		AF60A5CB234A20DD00E0488A /* DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
 		AFF40DFA234673E300D138BB /* Desafio Orama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Orama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF40DFD234673E300D138BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF40DFF234673E300D138BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +136,7 @@
 		AF60A57E234676D900E0488A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AF60A5B9234A172E00E0488A /* Detail */,
 				AF60A599234683F900E0488A /* Helper */,
 				AF60A59023467C5A00E0488A /* Commom */,
 				AF60A57F234676F000E0488A /* Home */,
@@ -144,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AF60A5832346772900E0488A /* Protocol */,
-				AF60A5822346771D00E0488A /* Intercator */,
+				AF60A5822346771D00E0488A /* Interactor */,
 			);
 			path = "Application Logic";
 			sourceTree = "<group>";
@@ -159,14 +172,14 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		AF60A5822346771D00E0488A /* Intercator */ = {
+		AF60A5822346771D00E0488A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				AF60A58C234679B700E0488A /* HomeInteractor.swift */,
 				AF60A597234680E900E0488A /* HomeEntity.swift */,
 				AF60A5A02346E6DE00E0488A /* HomeEntityMapper.swift */,
 			);
-			path = Intercator;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		AF60A5832346772900E0488A /* Protocol */ = {
@@ -250,6 +263,75 @@
 			children = (
 				AF60A5AA23477B8C00E0488A /* LoadingView.xib */,
 				AF60A5AC23477C4D00E0488A /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF60A5B9234A172E00E0488A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5BB234A174700E0488A /* User Interface */,
+				AF60A5BA234A173D00E0488A /* Application Logic */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		AF60A5BA234A173D00E0488A /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5BD234A185800E0488A /* Protocol */,
+				AF60A5BC234A175200E0488A /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		AF60A5BB234A174700E0488A /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5C4234A19EF00E0488A /* View */,
+				AF60A5C3234A19E700E0488A /* Presenter */,
+				AF60A5C2234A19D700E0488A /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		AF60A5BC234A175200E0488A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5C0234A19CA00E0488A /* DetailIteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AF60A5BD234A185800E0488A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5BE234A187700E0488A /* DetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AF60A5C2234A19D700E0488A /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5C9234A1A9900E0488A /* DetailWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		AF60A5C3234A19E700E0488A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5C7234A1A8100E0488A /* DetailPresenter.swift */,
+				AF60A5CB234A20DD00E0488A /* DetailItem.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AF60A5C4234A19EF00E0488A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A5C5234A1A1400E0488A /* DetailController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,19 +574,25 @@
 				AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */,
 				AF60A598234680E900E0488A /* HomeEntity.swift in Sources */,
 				AF60A59323467CAF00E0488A /* RequestManager.swift in Sources */,
+				AF60A5C8234A1A8100E0488A /* DetailPresenter.swift in Sources */,
 				AF60A59623467EA400E0488A /* FundModel.swift in Sources */,
 				AF60A5B1234790CE00E0488A /* HomeDisplayMapper.swift in Sources */,
 				AF60A5A9234779BF00E0488A /* Helper.swift in Sources */,
+				AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */,
 				AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */,
 				AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */,
+				AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */,
 				AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */,
 				AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */,
+				AF60A5C6234A1A1400E0488A /* DetailController.swift in Sources */,
 				AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */,
 				AF60A58D234679B700E0488A /* HomeInteractor.swift in Sources */,
 				AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */,
+				AF60A5BF234A187900E0488A /* DetailProtocol.swift in Sources */,
 				AF60A5892346793800E0488A /* HomePresenter.swift in Sources */,
 				AF60A5A32346EDE000E0488A /* HomeItem.swift in Sources */,
 				AF60A5B82347D1A600E0488A /* LoadingItem.swift in Sources */,
+				AF60A5CA234A1A9900E0488A /* DetailWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

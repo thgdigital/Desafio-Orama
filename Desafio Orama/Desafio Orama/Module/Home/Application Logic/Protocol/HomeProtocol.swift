@@ -13,6 +13,7 @@ protocol HomePresenterInput {
     func viewDidLoad()
     func refresh()
     func paginate()
+    func didSelected(with index: Int)
 }
 
 protocol HomePresenterOutput: class {

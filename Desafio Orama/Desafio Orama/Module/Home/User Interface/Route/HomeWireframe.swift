@@ -10,17 +10,23 @@ import UIKit
 
 
 class HomeWireframe: NSObject {
-
+    
     var window: UIWindow?
+    var navigation: UINavigationController?
     
     func makeScreen(window: UIWindow?) -> UINavigationController? {
         
         self.window = window
-       
+        
         let homeController = HomeControllerBuilder.make(wireframe: self)
         
-        let navigation = UINavigationController(rootViewController: homeController)
+        navigation = UINavigationController(rootViewController: homeController)
         
         return navigation
+    }
+    
+    func showDetail(detailItem: DetailItem) {
+        let detailController = DetailWireframe().makeScreen(item: detailItem)
+        navigation?.pushViewController(detailController, animated: true)
     }
 }

@@ -121,4 +121,8 @@ extension HomeController:  UICollectionViewDelegateFlowLayout {
         }
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelected(with: indexPath.row)
+    }
+    
 }
