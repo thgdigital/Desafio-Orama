@@ -23,6 +23,7 @@ class DetailController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView.dataSource = self
         collectionView.delegate = self
         presenter.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = "Voltar"
         
     }
     
@@ -88,7 +89,7 @@ class DetailController: UICollectionViewController, UICollectionViewDelegateFlow
             return
           }
           
-          section.didSelectCell(cell, at: indexPath)
+        section.didSelectCell(cell, at: indexPath)
     }
 }
 

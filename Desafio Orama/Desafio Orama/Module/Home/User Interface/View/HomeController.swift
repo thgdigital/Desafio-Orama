@@ -23,6 +23,11 @@ class HomeController: UICollectionViewController {
         presenter.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
+    
     fileprivate func initialLayout() {
         let nibName = UINib(nibName: "FundCell", bundle:nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: FundCell.identifier)

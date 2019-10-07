@@ -9,6 +9,7 @@
 import Foundation
 
 class HomePresenter : HomePresenterInput {
+    
     var finishPagination: Bool = false
     
     weak var output: HomePresenterOutput?
@@ -27,7 +28,6 @@ class HomePresenter : HomePresenterInput {
     }
     
     func viewDidLoad() {
-        output?.setupLayout(title: "Lista de fundos")
         interactor.fetch()
         output?.loading()
     }
@@ -46,6 +46,10 @@ class HomePresenter : HomePresenterInput {
     func didSelected(with index: Int) {
         let item = DetailItem(homeItem: items[index])
         wireframe.showDetail(detailItem: item)
+    }
+    
+    func viewWillAppear() {
+        output?.setupLayout(title: "Lista de fundos")
     }
 }
 
@@ -78,6 +82,6 @@ extension HomePresenter: HomeInteractorOutput {
     
     func filterLoading() -> [HomeItem] {
         items = items.filter({ !($0 is LoadingItem) })
-       return items
+        return items
     }
 }

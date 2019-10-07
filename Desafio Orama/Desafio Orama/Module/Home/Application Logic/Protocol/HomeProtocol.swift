@@ -11,6 +11,7 @@ import Foundation
 protocol HomePresenterInput {
     var finishPagination: Bool { get set }
     func viewDidLoad()
+    func viewWillAppear()
     func refresh()
     func paginate()
     func didSelected(with index: Int)
