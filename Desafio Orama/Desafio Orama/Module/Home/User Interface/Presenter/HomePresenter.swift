@@ -44,7 +44,7 @@ class HomePresenter : HomePresenterInput {
     }
     
     func didSelected(with index: Int) {
-        var item = DetailItem(homeItem: items[index])
+        let item = DetailItem(homeItem: items[index])
         wireframe.showDetail(detailItem: item)
     }
 }

@@ -15,6 +15,7 @@ protocol DetailPresenterInput {
 }
 protocol DetailPresenterOuput: class {
     func createLayout(title: String)
+    func createSections(sections: [Sections])
 }
 protocol DetailInteractorInput {
     

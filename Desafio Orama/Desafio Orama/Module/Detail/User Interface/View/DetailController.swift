@@ -10,76 +10,82 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class DetailController: UICollectionViewController {
+class DetailController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var presenter: DetailPresenterInput!
-
+    
+    var sections: [Sections] = [Sections]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
         presenter.viewDidLoad()
-    // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
     }
-
-
-
-    // MARK: UICollectionViewDataSource
-
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 5
+        return sections.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let section = sections[indexPath.row]
+        let identifier = section.cell(for: indexPath).identifier
+        
+        registerCell(section, collectionView: collectionView, at: indexPath)
+        
+        return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+    }
     
-        // Configure the cell
+    fileprivate func registerCell(_ section: Sections, collectionView: UICollectionView, at indexPath: IndexPath) {
+        let cellClass = section.cell(for: indexPath)
+        collectionView.register(cellClass, forCellWithReuseIdentifier: cellClass.identifier)
+        
+        let nibName = UINib(nibName: cellClass.identifier, bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: cellClass.identifier)
+    }
     
-        return cell
+   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let section = sections[indexPath.row]
+        
+        registerCell(section, collectionView: collectionView, at: indexPath)
+        
+        let cellType = section.cell(for: indexPath)
+        
+        var sizeCell = section.getCellSize(cellType, for: indexPath)
+        
+        if sizeCell == .zero, let cell = section.cell(for: indexPath).fromNib() {
+            cell.prepareForReuse()
+            section.willDisplayCell(cell, at: indexPath)
+            cell.cellWidthConstraint?.constant = section.cellWidth(collectionWidth: collectionView.frame.width)
+            cell.setNeedsLayout()
+            cell.layoutIfNeeded()
+            sizeCell = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+            section.setCell(cellType, size: sizeCell, for: indexPath)
+        }
+        return sizeCell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let section = sections[indexPath.row]
+        if let cell = cell as? CollectionViewCell {
+            section.willDisplayCell(cell, at: indexPath)
+            cell.cellWidthConstraint?.constant = section.cellWidth(collectionWidth: collectionView.frame.width)
+        }
     }
-    */
-
 }
 
 extension DetailController: DetailPresenterOuput {
+    func createSections(sections: [Sections]) {
+        self.sections = sections
+        collectionView.reloadData()
+    }
+    
     func createLayout(title: String) {
         self.title = title
     }
-  
+    
 }

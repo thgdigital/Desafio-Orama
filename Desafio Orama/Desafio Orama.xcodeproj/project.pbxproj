@@ -34,6 +34,17 @@
 		AF60A5C8234A1A8100E0488A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C7234A1A8100E0488A /* DetailPresenter.swift */; };
 		AF60A5CA234A1A9900E0488A /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5C9234A1A9900E0488A /* DetailWireframe.swift */; };
 		AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5CB234A20DD00E0488A /* DetailItem.swift */; };
+		AF64E0BB234B87CE00C93585 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0BA234B87CE00C93585 /* Sections.swift */; };
+		AF64E0BE234B886C00C93585 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0BC234B886C00C93585 /* CollectionViewCell.swift */; };
+		AF64E0BF234B886C00C93585 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF64E0BD234B886C00C93585 /* CollectionViewCell.xib */; };
+		AF64E0C1234B8A1700C93585 /* SectionsThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0C0234B8A1700C93585 /* SectionsThumbnail.swift */; };
+		AF64E0C4234B8A6000C93585 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0C2234B8A6000C93585 /* ThumbnailCell.swift */; };
+		AF64E0C5234B8A6000C93585 /* ThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF64E0C3234B8A6000C93585 /* ThumbnailCell.xib */; };
+		AF64E0C8234BA1FC00C93585 /* SectionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0C7234BA1FC00C93585 /* SectionsMapper.swift */; };
+		AF64E0CB234BB35C00C93585 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0C9234BB35C00C93585 /* DetailCell.swift */; };
+		AF64E0CC234BB35C00C93585 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF64E0CA234BB35C00C93585 /* DetailCell.xib */; };
+		AF64E0CE234BB63400C93585 /* DetailDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0CD234BB63400C93585 /* DetailDisplay.swift */; };
+		AF64E0D0234BB78C00C93585 /* DescriptionsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */; };
 		AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFD234673E300D138BB /* AppDelegate.swift */; };
 		AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFF234673E300D138BB /* SceneDelegate.swift */; };
 		AFF40E02234673E300D138BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E01234673E300D138BB /* HomeController.swift */; };
@@ -86,6 +97,17 @@
 		AF60A5C7234A1A8100E0488A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		AF60A5C9234A1A9900E0488A /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
 		AF60A5CB234A20DD00E0488A /* DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
+		AF64E0BA234B87CE00C93585 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		AF64E0BC234B886C00C93585 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AF64E0BD234B886C00C93585 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		AF64E0C0234B8A1700C93585 /* SectionsThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsThumbnail.swift; sourceTree = "<group>"; };
+		AF64E0C2234B8A6000C93585 /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
+		AF64E0C3234B8A6000C93585 /* ThumbnailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailCell.xib; sourceTree = "<group>"; };
+		AF64E0C7234BA1FC00C93585 /* SectionsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsMapper.swift; sourceTree = "<group>"; };
+		AF64E0C9234BB35C00C93585 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		AF64E0CA234BB35C00C93585 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		AF64E0CD234BB63400C93585 /* DetailDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDisplay.swift; sourceTree = "<group>"; };
+		AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionsSections.swift; sourceTree = "<group>"; };
 		AFF40DFA234673E300D138BB /* Desafio Orama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Orama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF40DFD234673E300D138BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF40DFF234673E300D138BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +310,7 @@
 		AF60A5BB234A174700E0488A /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				AF64E0B9234B87A800C93585 /* Sections */,
 				AF60A5C4234A19EF00E0488A /* View */,
 				AF60A5C3234A19E700E0488A /* Presenter */,
 				AF60A5C2234A19D700E0488A /* Wireframe */,
@@ -332,8 +355,26 @@
 			isa = PBXGroup;
 			children = (
 				AF60A5C5234A1A1400E0488A /* DetailController.swift */,
+				AF64E0BC234B886C00C93585 /* CollectionViewCell.swift */,
+				AF64E0BD234B886C00C93585 /* CollectionViewCell.xib */,
+				AF64E0C2234B8A6000C93585 /* ThumbnailCell.swift */,
+				AF64E0C3234B8A6000C93585 /* ThumbnailCell.xib */,
+				AF64E0C9234BB35C00C93585 /* DetailCell.swift */,
+				AF64E0CA234BB35C00C93585 /* DetailCell.xib */,
+				AF64E0CD234BB63400C93585 /* DetailDisplay.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AF64E0B9234B87A800C93585 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				AF64E0BA234B87CE00C93585 /* Sections.swift */,
+				AF64E0C0234B8A1700C93585 /* SectionsThumbnail.swift */,
+				AF64E0C7234BA1FC00C93585 /* SectionsMapper.swift */,
+				AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		AFF40DF1234673E300D138BB = {
@@ -473,11 +514,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF40E0A234673E800D138BB /* LaunchScreen.storyboard in Resources */,
+				AF64E0BF234B886C00C93585 /* CollectionViewCell.xib in Resources */,
 				AFF40E07234673E800D138BB /* Assets.xcassets in Resources */,
 				AF60A5B62347D16C00E0488A /* LoadingCell.xib in Resources */,
 				AF60A5A7234775D300E0488A /* FundCell.xib in Resources */,
 				AFF40E05234673E300D138BB /* Main.storyboard in Resources */,
+				AF64E0C5234B8A6000C93585 /* ThumbnailCell.xib in Resources */,
 				AF60A5AB23477B8C00E0488A /* LoadingView.xib in Resources */,
+				AF64E0CC234BB35C00C93585 /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +611,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF60A58F234679D400E0488A /* HomeProtocol.swift in Sources */,
+				AF64E0D0234BB78C00C93585 /* DescriptionsSections.swift in Sources */,
+				AF64E0BB234B87CE00C93585 /* Sections.swift in Sources */,
 				AF60A5A6234775D300E0488A /* FundCell.swift in Sources */,
 				AF60A58B2346798E00E0488A /* HomeWireframe.swift in Sources */,
 				AF60A5AF23478F5700E0488A /* HomeDisplay.swift in Sources */,
@@ -574,22 +620,28 @@
 				AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */,
 				AF60A598234680E900E0488A /* HomeEntity.swift in Sources */,
 				AF60A59323467CAF00E0488A /* RequestManager.swift in Sources */,
+				AF64E0C4234B8A6000C93585 /* ThumbnailCell.swift in Sources */,
 				AF60A5C8234A1A8100E0488A /* DetailPresenter.swift in Sources */,
 				AF60A59623467EA400E0488A /* FundModel.swift in Sources */,
 				AF60A5B1234790CE00E0488A /* HomeDisplayMapper.swift in Sources */,
+				AF64E0C1234B8A1700C93585 /* SectionsThumbnail.swift in Sources */,
 				AF60A5A9234779BF00E0488A /* Helper.swift in Sources */,
 				AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */,
 				AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */,
 				AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */,
 				AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */,
 				AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */,
+				AF64E0BE234B886C00C93585 /* CollectionViewCell.swift in Sources */,
+				AF64E0CE234BB63400C93585 /* DetailDisplay.swift in Sources */,
 				AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */,
 				AF60A5C6234A1A1400E0488A /* DetailController.swift in Sources */,
+				AF64E0CB234BB35C00C93585 /* DetailCell.swift in Sources */,
 				AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */,
 				AF60A58D234679B700E0488A /* HomeInteractor.swift in Sources */,
 				AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */,
 				AF60A5BF234A187900E0488A /* DetailProtocol.swift in Sources */,
 				AF60A5892346793800E0488A /* HomePresenter.swift in Sources */,
+				AF64E0C8234BA1FC00C93585 /* SectionsMapper.swift in Sources */,
 				AF60A5A32346EDE000E0488A /* HomeItem.swift in Sources */,
 				AF60A5B82347D1A600E0488A /* LoadingItem.swift in Sources */,
 				AF60A5CA234A1A9900E0488A /* DetailWireframe.swift in Sources */,

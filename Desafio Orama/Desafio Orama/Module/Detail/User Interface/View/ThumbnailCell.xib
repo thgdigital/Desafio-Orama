@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ThumbnailCell" customModule="Desafio_Orama" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="StB-qd-FOA">
+                        <rect key="frame" x="0.0" y="10" width="377" height="255"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="255" id="9cL-P7-4Hu"/>
+                            <constraint firstAttribute="width" priority="999" constant="377" id="sa6-Ax-UCk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hNV-s8-8eG">
+                        <rect key="frame" x="88.5" y="79.5" width="200" height="116"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="119.5" id="PnD-jo-ZpN"/>
+                            <constraint firstAttribute="width" constant="200" id="srj-Xi-wRp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hNV-s8-8eG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5qy-Ba-2Dp"/>
+                <constraint firstItem="StB-qd-FOA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="AUF-ZX-uDj"/>
+                <constraint firstAttribute="trailing" secondItem="StB-qd-FOA" secondAttribute="trailing" id="Qm2-e1-ZFS"/>
+                <constraint firstItem="hNV-s8-8eG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="UwK-4A-blc"/>
+                <constraint firstAttribute="bottom" secondItem="StB-qd-FOA" secondAttribute="bottom" constant="10" id="kUY-BO-QHt"/>
+                <constraint firstItem="StB-qd-FOA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w2O-Pd-7uq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="377" height="275"/>
+            <connections>
+                <outlet property="cellWidthConstraint" destination="sa6-Ax-UCk" id="mZH-t8-dVq"/>
+                <outlet property="thumbnailImageView" destination="StB-qd-FOA" id="Zo4-q8-3US"/>
+            </connections>
+            <point key="canvasLocation" x="374.63768115942031" y="201.22767857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+    </resources>
+</document>

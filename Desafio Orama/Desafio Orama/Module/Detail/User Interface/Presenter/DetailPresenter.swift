@@ -20,6 +20,7 @@ class DetailPresenter: DetailPresenterInput {
     
     func viewDidLoad() {
         output?.createLayout(title: "Detalhe do Fundo")
+        output?.createSections(sections: SectionsMapper.make(item: item))
     }
     
     func didSelected() {

@@ -21,6 +21,8 @@ class HomeEntityMapper {
             entity.thumbnailVideo = thumbnail
             entity.urlVideo = url
         }
+        entity.descriptionManager = model.fundManager.fundManagerDescription
+        
        
         return entity
     }
@@ -34,6 +36,7 @@ class HomeEntityMapper {
         item.minimumInitialApplicationAmount = entity.minimumInitialApplicationAmount
         item.thumbnailVideo = entity.thumbnailVideo
         item.urlVideo = entity.urlVideo
+        item.descriptionManager = entity.descriptionManager
         return item
     }
 }

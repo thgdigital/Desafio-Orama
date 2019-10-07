@@ -16,6 +16,7 @@ class DetailItem {
     var fundRiskProfile: String = ""
     var thumbnailVideo: String = ""
     var urlVideo: String = ""
+    var descriptionManager: String = ""
     
     init() {}
     
@@ -27,5 +28,6 @@ class DetailItem {
         self.simpleName = homeItem.simpleName
         self.thumbnailVideo = homeItem.thumbnailVideo
         self.urlVideo = homeItem.urlVideo
+        self.descriptionManager = homeItem.descriptionManager
     }
 }

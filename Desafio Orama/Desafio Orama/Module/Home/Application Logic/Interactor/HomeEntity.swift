@@ -16,4 +16,5 @@ class HomeEntity: NSObject {
     var fundRiskProfile: String = ""
     var thumbnailVideo: String = ""
     var urlVideo: String = ""
+    var descriptionManager: String = ""
 }
