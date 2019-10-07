@@ -42,4 +42,10 @@ class Sections {
         return collectionWidth
     }
     
+    func shouldHighlight(at indexPath: IndexPath) -> Bool {
+           return false
+    }
+    
+    func didSelectCell(_ cell: CollectionViewCell, at indexPath: IndexPath) {}
+    
 }

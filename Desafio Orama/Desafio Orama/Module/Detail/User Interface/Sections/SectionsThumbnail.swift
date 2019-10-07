@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SectionsThumbnail: Sections {
     
@@ -18,5 +19,17 @@ class SectionsThumbnail: Sections {
     
     override func cell(for indexPath: IndexPath) -> CollectionViewCell.Type {
         return ThumbnailCell.self
+    }
+    
+    override func shouldHighlight(at indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func didSelectCell(_ cell: CollectionViewCell, at indexPath: IndexPath) {
+        
+        if let itemDetail = item as? DetailItem, let urlVideo = URL(string: itemDetail.urlVideo) {
+            let webView = SFSafariViewController(url: urlVideo)
+            UIApplication.shared.keyWindow?.visibleViewController()?.present(webView, animated: true)
+        }
     }
 }

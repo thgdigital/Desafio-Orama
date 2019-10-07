@@ -47,7 +47,7 @@ class DetailController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView.register(nibName, forCellWithReuseIdentifier: cellClass.identifier)
     }
     
-   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let section = sections[indexPath.row]
         
@@ -75,6 +75,20 @@ class DetailController: UICollectionViewController, UICollectionViewDelegateFlow
             section.willDisplayCell(cell, at: indexPath)
             cell.cellWidthConstraint?.constant = section.cellWidth(collectionWidth: collectionView.frame.width)
         }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        let section = sections[indexPath.row]
+        return section.shouldHighlight(at: indexPath)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let section = sections[indexPath.row]
+          guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell else {
+            return
+          }
+          
+          section.didSelectCell(cell, at: indexPath)
     }
 }
 
