@@ -47,6 +47,8 @@
 		AF64E0D0234BB78C00C93585 /* DescriptionsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */; };
 		AF64E0D3234BD23200C93585 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D2234BD23200C93585 /* LoginInteractor.swift */; };
 		AF64E0D5234BD29600C93585 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D4234BD29600C93585 /* LoginManager.swift */; };
+		AF64E0D8234BD78200C93585 /* OramaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D6234BD78200C93585 /* OramaModel.xcdatamodeld */; };
+		AF64E0DA234CB44700C93585 /* User+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64E0D9234CB44700C93585 /* User+Extension.swift */; };
 		AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFD234673E300D138BB /* AppDelegate.swift */; };
 		AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40DFF234673E300D138BB /* SceneDelegate.swift */; };
 		AFF40E02234673E300D138BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E01234673E300D138BB /* HomeController.swift */; };
@@ -112,6 +114,8 @@
 		AF64E0CF234BB78C00C93585 /* DescriptionsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionsSections.swift; sourceTree = "<group>"; };
 		AF64E0D2234BD23200C93585 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		AF64E0D4234BD29600C93585 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		AF64E0D7234BD78200C93585 /* OramaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OramaModel.xcdatamodel; sourceTree = "<group>"; };
+		AF64E0D9234CB44700C93585 /* User+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extension.swift"; sourceTree = "<group>"; };
 		AFF40DFA234673E300D138BB /* Desafio Orama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Orama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF40DFD234673E300D138BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF40DFF234673E300D138BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 			children = (
 				AF60A59223467CAF00E0488A /* RequestManager.swift */,
 				AF64E0D4234BD29600C93585 /* LoginManager.swift */,
+				AF64E0D9234CB44700C93585 /* User+Extension.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 		AF60A59423467E7F00E0488A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF64E0D6234BD78200C93585 /* OramaModel.xcdatamodeld */,
 				AF60A59523467EA400E0488A /* FundModel.swift */,
 			);
 			path = Model;
@@ -631,6 +637,7 @@
 				AF60A58B2346798E00E0488A /* HomeWireframe.swift in Sources */,
 				AF60A5AF23478F5700E0488A /* HomeDisplay.swift in Sources */,
 				AFF40E02234673E300D138BB /* HomeController.swift in Sources */,
+				AF64E0DA234CB44700C93585 /* User+Extension.swift in Sources */,
 				AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */,
 				AF64E0D3234BD23200C93585 /* LoginInteractor.swift in Sources */,
 				AF60A598234680E900E0488A /* HomeEntity.swift in Sources */,
@@ -646,6 +653,7 @@
 				AF64E0D5234BD29600C93585 /* LoginManager.swift in Sources */,
 				AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */,
 				AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */,
+				AF64E0D8234BD78200C93585 /* OramaModel.xcdatamodeld in Sources */,
 				AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */,
 				AF64E0BE234B886C00C93585 /* CollectionViewCell.swift in Sources */,
 				AF64E0CE234BB63400C93585 /* DetailDisplay.swift in Sources */,
@@ -933,6 +941,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF64E0D6234BD78200C93585 /* OramaModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF64E0D7234BD78200C93585 /* OramaModel.xcdatamodel */,
+			);
+			currentVersion = AF64E0D7234BD78200C93585 /* OramaModel.xcdatamodel */;
+			path = OramaModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFF40DF2234673E300D138BB /* Project object */;
 }

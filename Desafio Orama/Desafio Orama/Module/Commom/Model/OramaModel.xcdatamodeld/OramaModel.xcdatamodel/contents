@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Fund" representedClassName="Fund" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionManager" optional="YES" attributeType="String"/>
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="fundRiskProfile" optional="YES" attributeType="String"/>
+        <attribute name="initialDate" optional="YES" attributeType="String"/>
+        <attribute name="minimumInitialApplicationAmount" optional="YES" attributeType="String"/>
+        <attribute name="simpleName" optional="YES" attributeType="String"/>
+        <attribute name="thumbnailVideo" optional="YES" attributeType="String"/>
+        <attribute name="urlVideo" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Fund" positionX="-54" positionY="9" width="128" height="163"/>
+    </elements>
+</model>

@@ -33,7 +33,30 @@ class DescriptionsSections: Sections {
 extension DescriptionsSections: CollectionViewDelegate {
     
     func didTapCompra() {
-        
+        if interactor.isLogged {
+            UIAlertController.showAlert(title: "Comprar", message: "Desejar comprar esse produto ?",
+                                        cancelButtonTitle: "Cancelar", confirmationButtonTitle: "Comprar",
+                                        dismissBlock: { (textField, action) in
+                                            
+            })
+        } else {
+            UIAlertController. showAlert(title: "Login", message: "Olá você não esta logado para efetuar há compra desse produto", cancelButtonTitle: "Cancelar", confirmationButtonTitle: "Realizar login", dismissBlock: { (textFields, action) in
+                guard let textField = textFields?.first,
+                    let emailToSave = textField.text else {
+                        return
+                }
+                guard let textFieldSSN = textFields?[1],
+                    let passwordSave = textFieldSSN.text else {
+                        return
+                }
+                self.interactor.save(email: emailToSave, password: passwordSave) { (status) in
+                    print("Estou logado? \(status)")
+                }
+            },    email: { (textField) in
+                textField.placeholder = "Digite seu e-mail"
+            }) { (textField) in
+                textField.placeholder = "Digite sua senha"
+            }
+        }
     }
-
 }

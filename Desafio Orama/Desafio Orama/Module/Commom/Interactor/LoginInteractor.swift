@@ -10,20 +10,26 @@ import Foundation
 
 protocol LoginInteractorInput {
     var isLogged: Bool { get set }
+    func save(email: String, password: String, completion:  @escaping ((Bool) -> Void))
 }
 
 protocol LoginInteractorOutput: class {
-    
+    func didLogged()
+    func didLogout()
 }
 
 class LoginInteractor: LoginInteractorInput {
     
-    var isLogged: Bool = false
+    weak var output: LoginInteractorOutput?
     
-    var manager: LoginManager
+    var isLogged: Bool = User.getUser() != nil
     
-    init(manager: LoginManager) {
-        self.manager = manager
+    func save(email: String, password: String, completion: @escaping ((Bool) -> Void)) {
+        let status = LoginManager.saveUser(email: email, password: password)
+        
+        if status {
+            output?.didLogged()
+        }
+        completion(status)
     }
-
 }

@@ -18,7 +18,7 @@ class SectionsMapper {
         }
         
         
-        let loginInteractor = LoginInteractor(manager: LoginManager())
+        let loginInteractor = LoginInteractor()
         
         sections.append(DescriptionsSections(interactor: loginInteractor, item: item))
         

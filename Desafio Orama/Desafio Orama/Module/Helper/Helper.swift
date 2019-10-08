@@ -169,3 +169,49 @@ extension UIWindow {
         }
     }
 }
+
+
+extension UIAlertController {
+    
+    func show(_ viewController: UIViewController? = nil) {
+        
+        let topViewController = viewController ?? UIApplication.shared.keyWindow?.visibleViewController()
+        
+        topViewController?.present(self, animated: true, completion: nil)
+    }
+
+    static func showAlert(title: String, message: String, cancelButtonTitle: String? = nil,
+                          confirmationButtonTitle: String? = nil, viewController: UIViewController? = nil,
+                          dismissBlock: ((_ textField: [UITextField]? , _ action: UIAlertAction)-> Void)? = nil ,
+                          cancelBlock: ((UIAlertAction)-> Void)? = nil, email: ((UITextField) -> Void)? = nil, password: ((UITextField) -> Void)? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        if email != nil {
+            alert.addTextField(configurationHandler: email)
+        }
+        
+        if password != nil {
+             alert.addTextField(configurationHandler: password)
+        }
+        
+        // Cancel Button
+        if cancelButtonTitle != nil {
+            alert.addAction(UIAlertAction(title: cancelButtonTitle, style: UIAlertAction.Style.cancel, handler: { (action) -> Void in
+                cancelBlock?(action)
+            }))
+        }
+        // Confirmation button
+        if confirmationButtonTitle != nil {
+
+            alert.addAction(UIAlertAction(title: confirmationButtonTitle, style: UIAlertAction.Style.default, handler: { (action) -> Void in
+                dismissBlock?(alert.textFields, action)
+            }))
+        }
+        
+        // Show
+        DispatchQueue.main.async {
+            alert.show(viewController)
+        }
+    }
+}
