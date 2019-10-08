@@ -40,7 +40,7 @@ extension DescriptionsSections: CollectionViewDelegate {
                                             
             })
         } else {
-            UIAlertController. showAlert(title: "Login", message: "Olá você não esta logado para efetuar há compra desse produto", cancelButtonTitle: "Cancelar", confirmationButtonTitle: "Realizar login", dismissBlock: { (textFields, action) in
+            UIAlertController.showAlert(title: "Login", message: "Olá você não esta logado para efetuar há compra desse produto", cancelButtonTitle: "Cancelar", confirmationButtonTitle: "Realizar login", dismissBlock: { (textFields, action) in
                 guard let textField = textFields?.first,
                     let emailToSave = textField.text else {
                         return
