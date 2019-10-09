@@ -42,12 +42,28 @@ class HomeController: UICollectionViewController {
         collectionView.isHidden = true
         view.addSubview(loadingView)
         loadingView.isHidden = true
+        let image: UIImage?
+        
+        if #available(iOS 13.0, *) {
+            image = UIImage(systemName: "list.dash")
+        } else {
+            image = nil
+        }
+        
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+       
+        
+        navigationItem.rightBarButtonItem = button
         NSLayoutConstraint.activate([
             loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
             loadingView.heightAnchor.constraint(equalToConstant: 180)
         ])
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -79,7 +95,7 @@ extension HomeController: HomePresenterOutput {
     
     func setupLayout(title: String) {
         if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
+//            self.navigationController?.navigationBar.prefersLargeTitles = true
         }
         self.title = title
         
