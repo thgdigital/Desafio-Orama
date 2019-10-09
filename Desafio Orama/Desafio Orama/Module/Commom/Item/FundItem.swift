@@ -1,5 +1,5 @@
 //
-//  HomeItem.swift
+//  FundItem.swift
 //  Desafio Orama
 //
 //  Created by THIAGO on 04/10/19.

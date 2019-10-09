@@ -20,7 +20,7 @@
 		AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A59A2346840A00E0488A /* StoryboardInstanciate.swift */; };
 		AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A59C2346855C00E0488A /* HomeControllerBuilder.swift */; };
 		AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A02346E6DE00E0488A /* HomeEntityMapper.swift */; };
-		AF60A5A32346EDE000E0488A /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A22346EDE000E0488A /* HomeItem.swift */; };
+		AF60A5A32346EDE000E0488A /* FundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A22346EDE000E0488A /* FundItem.swift */; };
 		AF60A5A6234775D300E0488A /* FundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A4234775D300E0488A /* FundCell.swift */; };
 		AF60A5A7234775D300E0488A /* FundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF60A5A5234775D300E0488A /* FundCell.xib */; };
 		AF60A5A9234779BF00E0488A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A8234779BE00E0488A /* Helper.swift */; };
@@ -96,7 +96,7 @@
 		AF60A59A2346840A00E0488A /* StoryboardInstanciate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstanciate.swift; sourceTree = "<group>"; };
 		AF60A59C2346855C00E0488A /* HomeControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerBuilder.swift; sourceTree = "<group>"; };
 		AF60A5A02346E6DE00E0488A /* HomeEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntityMapper.swift; sourceTree = "<group>"; };
-		AF60A5A22346EDE000E0488A /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		AF60A5A22346EDE000E0488A /* FundItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundItem.swift; sourceTree = "<group>"; };
 		AF60A5A4234775D300E0488A /* FundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundCell.swift; sourceTree = "<group>"; };
 		AF60A5A5234775D300E0488A /* FundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundCell.xib; sourceTree = "<group>"; };
 		AF60A5A8234779BE00E0488A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -310,7 +310,6 @@
 			children = (
 				AF60A5B72347D1A600E0488A /* LoadingItem.swift */,
 				AF60A5882346793800E0488A /* HomePresenter.swift */,
-				AF60A5A22346EDE000E0488A /* HomeItem.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -541,6 +540,7 @@
 		AFF9CABC234E2A0400D48DCB /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				AF60A5A22346EDE000E0488A /* FundItem.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -770,7 +770,7 @@
 				AF60A5BF234A187900E0488A /* DetailProtocol.swift in Sources */,
 				AF60A5892346793800E0488A /* HomePresenter.swift in Sources */,
 				AF64E0C8234BA1FC00C93585 /* SectionsMapper.swift in Sources */,
-				AF60A5A32346EDE000E0488A /* HomeItem.swift in Sources */,
+				AF60A5A32346EDE000E0488A /* FundItem.swift in Sources */,
 				AF60A5B82347D1A600E0488A /* LoadingItem.swift in Sources */,
 				AF60A5CA234A1A9900E0488A /* DetailWireframe.swift in Sources */,
 			);
