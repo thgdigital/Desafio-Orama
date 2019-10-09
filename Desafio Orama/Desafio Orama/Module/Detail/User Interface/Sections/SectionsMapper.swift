@@ -19,8 +19,10 @@ class SectionsMapper {
         
         
         let loginInteractor = LoginInteractor()
-        
-        sections.append(DescriptionsSections(interactor: loginInteractor, item: item))
+        let purchaseInteractor = PurchaseInteractor()
+        let section = DescriptionsSections(interactor: loginInteractor, purchaseInteractor: purchaseInteractor, item: item)
+        purchaseInteractor.output = section
+        sections.append(section)
         
         return sections
     }

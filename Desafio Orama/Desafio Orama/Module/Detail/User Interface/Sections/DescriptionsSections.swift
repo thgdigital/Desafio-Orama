@@ -13,8 +13,11 @@ class DescriptionsSections: Sections {
     
     var interactor: LoginInteractorInput
     
-    init(interactor: LoginInteractorInput, item: Any) {
+    var purchaseInteractor: PurchaseInteractorInput
+    
+    init(interactor: LoginInteractorInput, purchaseInteractor: PurchaseInteractorInput, item: Any) {
         self.interactor = interactor
+        self.purchaseInteractor = purchaseInteractor
         super.init(item: item)
     }
     
@@ -37,6 +40,10 @@ extension DescriptionsSections: CollectionViewDelegate {
             UIAlertController.showAlert(title: "Comprar", message: "Desejar comprar esse produto ?",
                                         cancelButtonTitle: "Cancelar", confirmationButtonTitle: "Comprar",
                                         dismissBlock: { (textField, action) in
+                                            if let item = self.item as? DetailItem {
+                                                self.purchaseInteractor.save(item: item)
+                                            }
+                                            
                                             
             })
         } else {
@@ -59,4 +66,21 @@ extension DescriptionsSections: CollectionViewDelegate {
             }
         }
     }
+}
+
+extension DescriptionsSections: PurchaseInteractorOutput {
+    
+    func didSaved() {
+        guard let navigationController =  UIApplication.shared.keyWindow?.visibleViewController()?.navigationController else {
+            return
+        }
+        
+        navigationController.popViewController(animated: true)
+    }
+    
+    func didErrorSaved() {
+        UIAlertController.showAlert(title: "OPSSS Error", message: "Erro ao compra este fundo")
+    }
+    
+    
 }

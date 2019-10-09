@@ -11,6 +11,7 @@ import CoreData
 
 extension User {
     
+    @discardableResult
     static func createUser(email: String, password: String) -> NSManagedObject {
         let managedContext = LoginManager.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
