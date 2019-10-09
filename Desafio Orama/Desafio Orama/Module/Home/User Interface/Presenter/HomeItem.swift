@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeItem {
+class FundItem {
     var simpleName: String = ""
     var initialDate: String = ""
     var fullName: String = ""

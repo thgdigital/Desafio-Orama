@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF48DC8E234E110600589952 /* MylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DC8D234E110600589952 /* MylistController.swift */; };
+		AF48DC96234E12D500589952 /* MylistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DC95234E12D500589952 /* MylistPresenter.swift */; };
+		AF48DC98234E12E800589952 /* MylistProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DC97234E12E800589952 /* MylistProtocol.swift */; };
 		AF60A5892346793800E0488A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5882346793800E0488A /* HomePresenter.swift */; };
 		AF60A58B2346798E00E0488A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A58A2346798E00E0488A /* HomeWireframe.swift */; };
 		AF60A58D234679B700E0488A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A58C234679B700E0488A /* HomeInteractor.swift */; };
@@ -23,7 +26,7 @@
 		AF60A5A9234779BF00E0488A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5A8234779BE00E0488A /* Helper.swift */; };
 		AF60A5AB23477B8C00E0488A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF60A5AA23477B8C00E0488A /* LoadingView.xib */; };
 		AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5AC23477C4D00E0488A /* LoadingView.swift */; };
-		AF60A5AF23478F5700E0488A /* HomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5AE23478F5600E0488A /* HomeDisplay.swift */; };
+		AF60A5AF23478F5700E0488A /* FundDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5AE23478F5600E0488A /* FundDisplay.swift */; };
 		AF60A5B1234790CE00E0488A /* HomeDisplayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5B0234790CE00E0488A /* HomeDisplayMapper.swift */; };
 		AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A5B32347D16C00E0488A /* LoadingCell.swift */; };
 		AF60A5B62347D16C00E0488A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF60A5B42347D16C00E0488A /* LoadingCell.xib */; };
@@ -60,8 +63,9 @@
 		AFF40E07234673E800D138BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF40E06234673E800D138BB /* Assets.xcassets */; };
 		AFF40E0A234673E800D138BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF40E08234673E800D138BB /* LaunchScreen.storyboard */; };
 		AFF40E15234673E900D138BB /* Desafio_OramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E14234673E900D138BB /* Desafio_OramaTests.swift */; };
-		CECD63983314FBDD22A885EB /* Pods_Desafio_Orama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA69653084C0607EED5CFDB /* Pods_Desafio_Orama.framework */; };
-		E924441E14193104A715E848 /* Pods_Desafio_OramaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14930915CB6021F792D51BDC /* Pods_Desafio_OramaTests.framework */; };
+		AFF9CABA234E222F00D48DCB /* MylistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */; };
+		C41E2A9F3AD8F22C83052957 /* Pods_Desafio_OramaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DC668705EA3FF7DE5BC26E /* Pods_Desafio_OramaTests.framework */; };
+		E8F8211AA5D957C255A82883 /* Pods_Desafio_Orama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B122FEB148A7C17CFB9A8C46 /* Pods_Desafio_Orama.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +79,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14930915CB6021F792D51BDC /* Pods_Desafio_OramaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_OramaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C8D18806D7A4548544E4014 /* Pods-Desafio Orama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Orama.debug.xcconfig"; path = "Target Support Files/Pods-Desafio Orama/Pods-Desafio Orama.debug.xcconfig"; sourceTree = "<group>"; };
-		8BA69653084C0607EED5CFDB /* Pods_Desafio_Orama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_Orama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		029CEA141E18CB6EFB8B2252 /* Pods-Desafio Orama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Orama.release.xcconfig"; path = "Target Support Files/Pods-Desafio Orama/Pods-Desafio Orama.release.xcconfig"; sourceTree = "<group>"; };
+		1E4BCD61F8A8728C5214DB8A /* Pods-Desafio OramaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio OramaTests.release.xcconfig"; path = "Target Support Files/Pods-Desafio OramaTests/Pods-Desafio OramaTests.release.xcconfig"; sourceTree = "<group>"; };
+		5ABCDB0E1D6ACDCA37DC16DF /* Pods-Desafio Orama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Orama.debug.xcconfig"; path = "Target Support Files/Pods-Desafio Orama/Pods-Desafio Orama.debug.xcconfig"; sourceTree = "<group>"; };
+		92DC668705EA3FF7DE5BC26E /* Pods_Desafio_OramaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_OramaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF48DC8D234E110600589952 /* MylistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistController.swift; sourceTree = "<group>"; };
+		AF48DC95234E12D500589952 /* MylistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistPresenter.swift; sourceTree = "<group>"; };
+		AF48DC97234E12E800589952 /* MylistProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistProtocol.swift; sourceTree = "<group>"; };
 		AF60A5882346793800E0488A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		AF60A58A2346798E00E0488A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		AF60A58C234679B700E0488A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -94,7 +102,7 @@
 		AF60A5A8234779BE00E0488A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		AF60A5AA23477B8C00E0488A /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		AF60A5AC23477C4D00E0488A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = "Desafio Orama/Module/Commom/View/LoadingView.swift"; sourceTree = SOURCE_ROOT; };
-		AF60A5AE23478F5600E0488A /* HomeDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplay.swift; sourceTree = "<group>"; };
+		AF60A5AE23478F5600E0488A /* FundDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDisplay.swift; sourceTree = "<group>"; };
 		AF60A5B0234790CE00E0488A /* HomeDisplayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayMapper.swift; sourceTree = "<group>"; };
 		AF60A5B32347D16C00E0488A /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		AF60A5B42347D16C00E0488A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
@@ -135,9 +143,9 @@
 		AFF40E10234673E900D138BB /* Desafio OramaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio OramaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF40E14234673E900D138BB /* Desafio_OramaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_OramaTests.swift; sourceTree = "<group>"; };
 		AFF40E16234673E900D138BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8EF4DFC7DCED8E6791F413E /* Pods-Desafio OramaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio OramaTests.release.xcconfig"; path = "Target Support Files/Pods-Desafio OramaTests/Pods-Desafio OramaTests.release.xcconfig"; sourceTree = "<group>"; };
-		E13DC1450230FA4B6AC998AD /* Pods-Desafio OramaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio OramaTests.debug.xcconfig"; path = "Target Support Files/Pods-Desafio OramaTests/Pods-Desafio OramaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4A1EEF12D77F3B72E1FE25E /* Pods-Desafio Orama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Orama.release.xcconfig"; path = "Target Support Files/Pods-Desafio Orama/Pods-Desafio Orama.release.xcconfig"; sourceTree = "<group>"; };
+		AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistInteractor.swift; sourceTree = "<group>"; };
+		B0B7441C02BFBFFD0EA68B59 /* Pods-Desafio OramaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio OramaTests.debug.xcconfig"; path = "Target Support Files/Pods-Desafio OramaTests/Pods-Desafio OramaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B122FEB148A7C17CFB9A8C46 /* Pods_Desafio_Orama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_Orama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECD63983314FBDD22A885EB /* Pods_Desafio_Orama.framework in Frameworks */,
+				E8F8211AA5D957C255A82883 /* Pods_Desafio_Orama.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,27 +161,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E924441E14193104A715E848 /* Pods_Desafio_OramaTests.framework in Frameworks */,
+				C41E2A9F3AD8F22C83052957 /* Pods_Desafio_OramaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71B5DB0C1AF13DF70BF06425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B122FEB148A7C17CFB9A8C46 /* Pods_Desafio_Orama.framework */,
+				92DC668705EA3FF7DE5BC26E /* Pods_Desafio_OramaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		888BA7722A1EF28C650977A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7C8D18806D7A4548544E4014 /* Pods-Desafio Orama.debug.xcconfig */,
-				E4A1EEF12D77F3B72E1FE25E /* Pods-Desafio Orama.release.xcconfig */,
-				E13DC1450230FA4B6AC998AD /* Pods-Desafio OramaTests.debug.xcconfig */,
-				C8EF4DFC7DCED8E6791F413E /* Pods-Desafio OramaTests.release.xcconfig */,
+				5ABCDB0E1D6ACDCA37DC16DF /* Pods-Desafio Orama.debug.xcconfig */,
+				029CEA141E18CB6EFB8B2252 /* Pods-Desafio Orama.release.xcconfig */,
+				B0B7441C02BFBFFD0EA68B59 /* Pods-Desafio OramaTests.debug.xcconfig */,
+				1E4BCD61F8A8728C5214DB8A /* Pods-Desafio OramaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF48DC8C234E10C500589952 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC90234E112200589952 /* Application Logic */,
+				AF48DC8F234E111900589952 /* User Interface */,
+			);
+			path = MyList;
+			sourceTree = "<group>";
+		};
+		AF48DC8F234E111900589952 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC92234E113500589952 /* Presenter */,
+				AF48DC91234E112700589952 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		AF48DC90234E112200589952 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC94234E12B500589952 /* Protocol */,
+				AF48DC93234E129900589952 /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		AF48DC91234E112700589952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC8D234E110600589952 /* MylistController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF48DC92234E113500589952 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC95234E12D500589952 /* MylistPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AF48DC93234E129900589952 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AF48DC94234E12B500589952 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AF48DC97234E12E800589952 /* MylistProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		AF60A57E234676D900E0488A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AF48DC8C234E10C500589952 /* MyList */,
 				AF60A59023467C5A00E0488A /* Commom */,
 				AF60A5B9234A172E00E0488A /* Detail */,
 				AF60A599234683F900E0488A /* Helper */,
@@ -253,7 +330,6 @@
 				AF60A59C2346855C00E0488A /* HomeControllerBuilder.swift */,
 				AF60A5A4234775D300E0488A /* FundCell.swift */,
 				AF60A5A5234775D300E0488A /* FundCell.xib */,
-				AF60A5AE23478F5600E0488A /* HomeDisplay.swift */,
 				AF60A5B0234790CE00E0488A /* HomeDisplayMapper.swift */,
 				AF60A5B32347D16C00E0488A /* LoadingCell.swift */,
 				AF60A5B42347D16C00E0488A /* LoadingCell.xib */,
@@ -264,6 +340,8 @@
 		AF60A59023467C5A00E0488A /* Commom */ = {
 			isa = PBXGroup;
 			children = (
+				AFF9CABC234E2A0400D48DCB /* Item */,
+				AFF9CABB234E29F100D48DCB /* Display */,
 				AF64E0D1234BD21D00C93585 /* Interactor */,
 				AF60A5B22347D0F200E0488A /* View */,
 				AF60A59423467E7F00E0488A /* Model */,
@@ -416,7 +494,7 @@
 				AFF40E13234673E900D138BB /* Desafio OramaTests */,
 				AFF40DFB234673E300D138BB /* Products */,
 				888BA7722A1EF28C650977A1 /* Pods */,
-				D93CEA2786C7ED54B6C55A80 /* Frameworks */,
+				71B5DB0C1AF13DF70BF06425 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -452,13 +530,19 @@
 			path = "Desafio OramaTests";
 			sourceTree = "<group>";
 		};
-		D93CEA2786C7ED54B6C55A80 /* Frameworks */ = {
+		AFF9CABB234E29F100D48DCB /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				8BA69653084C0607EED5CFDB /* Pods_Desafio_Orama.framework */,
-				14930915CB6021F792D51BDC /* Pods_Desafio_OramaTests.framework */,
+				AF60A5AE23478F5600E0488A /* FundDisplay.swift */,
 			);
-			name = Frameworks;
+			path = Display;
+			sourceTree = "<group>";
+		};
+		AFF9CABC234E2A0400D48DCB /* Item */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,11 +552,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF40E19234673E900D138BB /* Build configuration list for PBXNativeTarget "Desafio Orama" */;
 			buildPhases = (
-				768D695512BD924FAE392CFC /* [CP] Check Pods Manifest.lock */,
+				EF1B8A9F835EB7EAFD6F7C85 /* [CP] Check Pods Manifest.lock */,
 				AFF40DF6234673E300D138BB /* Sources */,
 				AFF40DF7234673E300D138BB /* Frameworks */,
 				AFF40DF8234673E300D138BB /* Resources */,
-				701D7BA3BDAC7B946E08B37F /* [CP] Embed Pods Frameworks */,
+				180F884F94AC97225F81455B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -487,7 +571,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF40E1C234673E900D138BB /* Build configuration list for PBXNativeTarget "Desafio OramaTests" */;
 			buildPhases = (
-				3DCC3814343F0F838AD609C4 /* [CP] Check Pods Manifest.lock */,
+				558B59EC50DDAEF9D9BE4D6B /* [CP] Check Pods Manifest.lock */,
 				AFF40E0C234673E900D138BB /* Sources */,
 				AFF40E0D234673E900D138BB /* Frameworks */,
 				AFF40E0E234673E900D138BB /* Resources */,
@@ -567,29 +651,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3DCC3814343F0F838AD609C4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Desafio OramaTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		701D7BA3BDAC7B946E08B37F /* [CP] Embed Pods Frameworks */ = {
+		180F884F94AC97225F81455B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,7 +675,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Desafio Orama/Pods-Desafio Orama-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		768D695512BD924FAE392CFC /* [CP] Check Pods Manifest.lock */ = {
+		558B59EC50DDAEF9D9BE4D6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Desafio OramaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1B8A9F835EB7EAFD6F7C85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -648,12 +732,14 @@
 				AF60A5A6234775D300E0488A /* FundCell.swift in Sources */,
 				AFB49B62234D50EF00C44E83 /* Fund+extension.swift in Sources */,
 				AF60A58B2346798E00E0488A /* HomeWireframe.swift in Sources */,
-				AF60A5AF23478F5700E0488A /* HomeDisplay.swift in Sources */,
+				AF60A5AF23478F5700E0488A /* FundDisplay.swift in Sources */,
+				AF48DC8E234E110600589952 /* MylistController.swift in Sources */,
 				AFF40E02234673E300D138BB /* HomeController.swift in Sources */,
 				AF64E0DA234CB44700C93585 /* User+Extension.swift in Sources */,
 				AF60A5AD23477C4D00E0488A /* LoadingView.swift in Sources */,
 				AFB49B5E234D47B300C44E83 /* PurchaseManager.swift in Sources */,
 				AF64E0D3234BD23200C93585 /* LoginInteractor.swift in Sources */,
+				AF48DC98234E12E800589952 /* MylistProtocol.swift in Sources */,
 				AF60A598234680E900E0488A /* HomeEntity.swift in Sources */,
 				AF60A59323467CAF00E0488A /* RequestManager.swift in Sources */,
 				AF64E0C4234B8A6000C93585 /* ThumbnailCell.swift in Sources */,
@@ -661,6 +747,7 @@
 				AF60A59623467EA400E0488A /* FundModel.swift in Sources */,
 				AF60A5B1234790CE00E0488A /* HomeDisplayMapper.swift in Sources */,
 				AF64E0C1234B8A1700C93585 /* SectionsThumbnail.swift in Sources */,
+				AFF9CABA234E222F00D48DCB /* MylistInteractor.swift in Sources */,
 				AF60A5A9234779BF00E0488A /* Helper.swift in Sources */,
 				AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */,
 				AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */,
@@ -675,6 +762,7 @@
 				AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */,
 				AF60A5C6234A1A1400E0488A /* DetailController.swift in Sources */,
 				AF64E0CB234BB35C00C93585 /* DetailCell.swift in Sources */,
+				AF48DC96234E12D500589952 /* MylistPresenter.swift in Sources */,
 				AFF40DFE234673E300D138BB /* AppDelegate.swift in Sources */,
 				AF60A58D234679B700E0488A /* HomeInteractor.swift in Sources */,
 				AFF40E00234673E300D138BB /* SceneDelegate.swift in Sources */,
@@ -842,9 +930,10 @@
 		};
 		AFF40E1A234673E900D138BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C8D18806D7A4548544E4014 /* Pods-Desafio Orama.debug.xcconfig */;
+			baseConfigurationReference = 5ABCDB0E1D6ACDCA37DC16DF /* Pods-Desafio Orama.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MQPP6L4J;
 				INFOPLIST_FILE = "Desafio Orama/Info.plist";
@@ -855,6 +944,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.thgdigital.Desafio-Orama";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -862,9 +952,10 @@
 		};
 		AFF40E1B234673E900D138BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4A1EEF12D77F3B72E1FE25E /* Pods-Desafio Orama.release.xcconfig */;
+			baseConfigurationReference = 029CEA141E18CB6EFB8B2252 /* Pods-Desafio Orama.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29MQPP6L4J;
 				INFOPLIST_FILE = "Desafio Orama/Info.plist";
@@ -875,6 +966,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.thgdigital.Desafio-Orama";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -882,7 +974,7 @@
 		};
 		AFF40E1D234673E900D138BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E13DC1450230FA4B6AC998AD /* Pods-Desafio OramaTests.debug.xcconfig */;
+			baseConfigurationReference = B0B7441C02BFBFFD0EA68B59 /* Pods-Desafio OramaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -905,7 +997,7 @@
 		};
 		AFF40E1E234673E900D138BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8EF4DFC7DCED8E6791F413E /* Pods-Desafio OramaTests.release.xcconfig */;
+			baseConfigurationReference = 1E4BCD61F8A8728C5214DB8A /* Pods-Desafio OramaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

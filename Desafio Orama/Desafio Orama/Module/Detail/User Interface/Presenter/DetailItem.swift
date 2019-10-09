@@ -20,7 +20,7 @@ class DetailItem {
     
     init() {}
     
-    init(homeItem: HomeItem) {
+    init(homeItem: FundItem) {
         self.fullName = homeItem.fullName
         self.fundRiskProfile = homeItem.fundRiskProfile
         self.initialDate = homeItem.initialDate

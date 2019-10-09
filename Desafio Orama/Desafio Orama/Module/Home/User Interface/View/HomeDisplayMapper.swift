@@ -9,8 +9,8 @@
 import Foundation
 
 class HomeDisplayMapper {
-    static func make(item: HomeItem) -> HomeDisplay {
-        let display = HomeDisplay()
+    static func make(item: FundItem) -> FundDisplay {
+        let display = FundDisplay()
         display.name = item.simpleName
         let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true

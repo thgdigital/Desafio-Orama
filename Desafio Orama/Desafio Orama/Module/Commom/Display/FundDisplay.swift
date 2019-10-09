@@ -1,5 +1,5 @@
 //
-//  HomeDisplay.swift
+//  FundDisplay.swift
 //  Desafio Orama
 //
 //  Created by THIAGO on 04/10/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeDisplay {
+class FundDisplay {
     var name: String = ""
     var currency: String = ""
     var riskProfile: String = ""
