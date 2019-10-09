@@ -27,8 +27,8 @@ class HomeEntityMapper {
         return entity
     }
     
-    static func make(entity: HomeEntity) -> HomeItem {
-        let item = HomeItem()
+    static func make(entity: HomeEntity) -> FundItem {
+        let item = FundItem()
         item.fullName = entity.fullName
         item.simpleName = entity.simpleName
         item.fundRiskProfile = entity.fundRiskProfile

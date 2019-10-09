@@ -19,8 +19,8 @@ protocol HomePresenterInput {
 
 protocol HomePresenterOutput: class {
     func setupLayout(title: String)
-    func fetched(items: [HomeItem])
-    func fetched(paginate items: [HomeItem])
+    func fetched(items: [FundItem])
+    func fetched(paginate items: [FundItem])
     func loading()
     func stopLoading()
 

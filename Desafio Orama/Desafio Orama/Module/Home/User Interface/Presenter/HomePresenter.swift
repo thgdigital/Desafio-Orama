@@ -18,7 +18,7 @@ class HomePresenter : HomePresenterInput {
     
     var interactor: HomeInteractorInput
     
-    var items: [HomeItem] = [HomeItem]()
+    var items: [FundItem] = [FundItem]()
     
     let loadingItem = LoadingItem()
     
@@ -80,7 +80,7 @@ extension HomePresenter: HomeInteractorOutput {
         output?.fetched(paginate: items)
     }
     
-    func filterLoading() -> [HomeItem] {
+    func filterLoading() -> [FundItem] {
         items = items.filter({ !($0 is LoadingItem) })
         return items
     }

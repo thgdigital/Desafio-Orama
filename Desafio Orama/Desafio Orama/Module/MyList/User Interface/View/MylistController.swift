@@ -14,7 +14,7 @@ class MylistController: UICollectionViewController {
     
     var presenter: MylistPresenterInput!
 
-    var items: [HomeItem] = [HomeItem]()
+    var items: [FundItem] = [FundItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class MylistController: UICollectionViewController {
 }
 
 extension MylistController: MylistPresenterOuput {
-    func fetched(items: [HomeItem]) {
+    func fetched(items: [FundItem]) {
         
     }
     

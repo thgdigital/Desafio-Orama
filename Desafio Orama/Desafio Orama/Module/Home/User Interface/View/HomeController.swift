@@ -13,7 +13,7 @@ class HomeController: UICollectionViewController {
     var presenter: HomePresenterInput!
     var loadingView = LoadingView.instanceFromNib()
     
-    var items: [HomeItem] = [HomeItem]()
+    var items: [FundItem] = [FundItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +69,12 @@ class HomeController: UICollectionViewController {
 
 extension HomeController: HomePresenterOutput {
     
-    func fetched(items: [HomeItem]) {
+    func fetched(items: [FundItem]) {
         self.items = items
         collectionView.reloadData()
     }
     
-    func fetched(paginate items: [HomeItem]) {
+    func fetched(paginate items: [FundItem]) {
         self.items = items
         collectionView.reloadItemsInSection(sectionIndex: 0, newCount: self.items.count) {
             let indexPathsForVisibleItems = self.collectionView.indexPathsForVisibleItems

@@ -16,7 +16,7 @@ class FundCell: UICollectionViewCell {
     @IBOutlet weak var borderView: UIView!
     
 
-    func poppulate(display: HomeDisplay, color: UIColor) {
+    func poppulate(display: FundDisplay, color: UIColor) {
         borderView.backgroundColor = color
         titleLabel.text = display.name
         currencyLabel.text = display.currency

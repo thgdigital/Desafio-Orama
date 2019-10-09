@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoadingItem: HomeItem {
+class LoadingItem: FundItem {
     
 }
