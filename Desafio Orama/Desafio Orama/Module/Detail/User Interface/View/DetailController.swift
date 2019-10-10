@@ -76,6 +76,9 @@ class DetailController: UICollectionViewController, UICollectionViewDelegateFlow
             section.willDisplayCell(cell, at: indexPath)
             cell.cellWidthConstraint?.constant = section.cellWidth(collectionWidth: collectionView.frame.width)
         }
+        if let section = section as? DescriptionsSections {
+            section.viewcontroller = self
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

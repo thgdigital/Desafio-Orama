@@ -15,6 +15,8 @@ class DescriptionsSections: Sections {
     
     var purchaseInteractor: PurchaseInteractorInput
     
+    weak var viewcontroller: UIViewController?
+    
     init(interactor: LoginInteractorInput, purchaseInteractor: PurchaseInteractorInput, item: Any) {
         self.interactor = interactor
         self.purchaseInteractor = purchaseInteractor
@@ -79,7 +81,7 @@ extension DescriptionsSections: PurchaseInteractorOutput {
     }
     
     func didErrorSaved() {
-        UIAlertController.showAlert(title: "OPSSS Error", message: "Erro ao compra este fundo")
+        UIAlertController.showAlert(title: "OPSSS Error", message: "Erro ao compra este fundo", viewController: viewcontroller)
     }
     
     
