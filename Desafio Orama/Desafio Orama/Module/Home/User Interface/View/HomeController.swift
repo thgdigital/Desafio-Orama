@@ -50,7 +50,7 @@ class HomeController: UICollectionViewController {
             image = nil
         }
         
-        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(tap))
        
         
         navigationItem.rightBarButtonItem = button
@@ -62,6 +62,9 @@ class HomeController: UICollectionViewController {
         ])
     }
     
+    @objc func tap(){
+        presenter.tapNavigation()
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

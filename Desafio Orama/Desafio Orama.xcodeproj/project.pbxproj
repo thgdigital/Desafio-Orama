@@ -64,6 +64,10 @@
 		AFF40E0A234673E800D138BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF40E08234673E800D138BB /* LaunchScreen.storyboard */; };
 		AFF40E15234673E900D138BB /* Desafio_OramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF40E14234673E900D138BB /* Desafio_OramaTests.swift */; };
 		AFF9CABA234E222F00D48DCB /* MylistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */; };
+		AFF9CABE234E760000D48DCB /*  MylistControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CABD234E760000D48DCB /*  MylistControllerBuilder.swift */; };
+		AFF9CAC1234E776000D48DCB /* MylistWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CAC0234E776000D48DCB /* MylistWireframe.swift */; };
+		AFF9CAC3234F62CC00D48DCB /* MylistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CAC2234F62CC00D48DCB /* MylistEntity.swift */; };
+		AFF9CAC5234F63E400D48DCB /* MylistEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9CAC4234F63E400D48DCB /* MylistEntityMapper.swift */; };
 		C41E2A9F3AD8F22C83052957 /* Pods_Desafio_OramaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DC668705EA3FF7DE5BC26E /* Pods_Desafio_OramaTests.framework */; };
 		E8F8211AA5D957C255A82883 /* Pods_Desafio_Orama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B122FEB148A7C17CFB9A8C46 /* Pods_Desafio_Orama.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +148,10 @@
 		AFF40E14234673E900D138BB /* Desafio_OramaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_OramaTests.swift; sourceTree = "<group>"; };
 		AFF40E16234673E900D138BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistInteractor.swift; sourceTree = "<group>"; };
+		AFF9CABD234E760000D48DCB /*  MylistControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MylistControllerBuilder.swift"; sourceTree = "<group>"; };
+		AFF9CAC0234E776000D48DCB /* MylistWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistWireframe.swift; sourceTree = "<group>"; };
+		AFF9CAC2234F62CC00D48DCB /* MylistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistEntity.swift; sourceTree = "<group>"; };
+		AFF9CAC4234F63E400D48DCB /* MylistEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylistEntityMapper.swift; sourceTree = "<group>"; };
 		B0B7441C02BFBFFD0EA68B59 /* Pods-Desafio OramaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio OramaTests.debug.xcconfig"; path = "Target Support Files/Pods-Desafio OramaTests/Pods-Desafio OramaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B122FEB148A7C17CFB9A8C46 /* Pods_Desafio_Orama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_Orama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +208,7 @@
 		AF48DC8F234E111900589952 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				AFF9CABF234E773F00D48DCB /* Wireframe */,
 				AF48DC92234E113500589952 /* Presenter */,
 				AF48DC91234E112700589952 /* View */,
 			);
@@ -219,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				AF48DC8D234E110600589952 /* MylistController.swift */,
+				AFF9CABD234E760000D48DCB /*  MylistControllerBuilder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				AFF9CAB9234E222F00D48DCB /* MylistInteractor.swift */,
+				AFF9CAC2234F62CC00D48DCB /* MylistEntity.swift */,
+				AFF9CAC4234F63E400D48DCB /* MylistEntityMapper.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -545,6 +557,14 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
+		AFF9CABF234E773F00D48DCB /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				AFF9CAC0234E776000D48DCB /* MylistWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -748,11 +768,14 @@
 				AF60A5B1234790CE00E0488A /* HomeDisplayMapper.swift in Sources */,
 				AF64E0C1234B8A1700C93585 /* SectionsThumbnail.swift in Sources */,
 				AFF9CABA234E222F00D48DCB /* MylistInteractor.swift in Sources */,
+				AFF9CABE234E760000D48DCB /*  MylistControllerBuilder.swift in Sources */,
 				AF60A5A9234779BF00E0488A /* Helper.swift in Sources */,
 				AF60A5CC234A20DD00E0488A /* DetailItem.swift in Sources */,
 				AF60A59D2346855C00E0488A /* HomeControllerBuilder.swift in Sources */,
+				AFF9CAC3234F62CC00D48DCB /* MylistEntity.swift in Sources */,
 				AF64E0D5234BD29600C93585 /* LoginManager.swift in Sources */,
 				AF60A59B2346840A00E0488A /* StoryboardInstanciate.swift in Sources */,
+				AFF9CAC1234E776000D48DCB /* MylistWireframe.swift in Sources */,
 				AF60A5C1234A19CA00E0488A /* DetailIteractor.swift in Sources */,
 				AF64E0D8234BD78200C93585 /* OramaModel.xcdatamodeld in Sources */,
 				AF60A5A12346E6DE00E0488A /* HomeEntityMapper.swift in Sources */,
@@ -760,6 +783,7 @@
 				AF64E0CE234BB63400C93585 /* DetailDisplay.swift in Sources */,
 				AFB49B60234D4C7C00C44E83 /* CoredataManager.swift in Sources */,
 				AF60A5B52347D16C00E0488A /* LoadingCell.swift in Sources */,
+				AFF9CAC5234F63E400D48DCB /* MylistEntityMapper.swift in Sources */,
 				AF60A5C6234A1A1400E0488A /* DetailController.swift in Sources */,
 				AF64E0CB234BB35C00C93585 /* DetailCell.swift in Sources */,
 				AF48DC96234E12D500589952 /* MylistPresenter.swift in Sources */,
@@ -942,7 +966,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.thgdigital.Desafio-Orama";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globo.oglobo.DigitalPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -964,7 +988,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.thgdigital.Desafio-Orama";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globo.oglobo.DigitalPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

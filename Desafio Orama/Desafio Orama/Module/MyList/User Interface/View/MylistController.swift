@@ -23,13 +23,20 @@ class MylistController: UICollectionViewController {
           collectionView.register(nibName, forCellWithReuseIdentifier: FundCell.identifier)
           let nibNameLoading = UINib(nibName: "LoadingCell", bundle:nil)
         collectionView.register(nibNameLoading, forCellWithReuseIdentifier: LoadingCell.identifier)
-
+        initialLayout()
         presenter.viewDidLoad()
+    }
+    
+    fileprivate func initialLayout() {
+        navigationController?.navigationBar.topItem?.title = "Voltar"
+        view.backgroundColor = .white
+        collectionView.backgroundColor = .white
+        collectionView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,10 +48,10 @@ class MylistController: UICollectionViewController {
 
 extension MylistController: MylistPresenterOuput {
     func fetched(items: [FundItem]) {
-        
+        self.items = items
+        collectionView.reloadData()
     }
-    
-    
+
 }
 extension MylistController:  UICollectionViewDelegateFlowLayout {
     

@@ -29,4 +29,9 @@ class HomeWireframe: NSObject {
         let detailController = DetailWireframe().makeScreen(item: detailItem)
         navigation?.pushViewController(detailController, animated: true)
     }
+    
+    func showMyList() {
+        let detailController = MylistWireframe().make()
+        navigation?.pushViewController(detailController, animated: true)
+    }
 }

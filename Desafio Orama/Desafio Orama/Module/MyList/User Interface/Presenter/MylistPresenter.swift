@@ -21,5 +21,11 @@ class MylistPresenter: MylistPresenterInput {
     func viewDidLoad() {
         interactor.fetch()
     }
-
+    
+}
+extension MylistPresenter: MylistInteractorOuput {
+    
+    func fetched(entites: [MylistEntity]) {
+        ouput?.fetched(items: entites.map({ MylistEntityMapper.make(entity: $0)}))
+    }
 }

@@ -22,5 +22,5 @@ protocol MylistInteractorInput {
 }
 
 protocol MylistInteractorOuput: class {
-    
+    func fetched(entites: [MylistEntity])
 }

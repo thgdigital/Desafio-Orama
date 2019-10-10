@@ -17,7 +17,7 @@ class PurchaseManager: CoredataManager {
     }
     
     static func getList() -> [Fund] {
-        let managedContext = LoginManager.persistentContainer.viewContext
+        let managedContext = persistentContainer.viewContext
         let request = NSFetchRequest<Fund>(entityName:"Fund")
         do {
             let result = try managedContext.fetch(request)

@@ -28,7 +28,6 @@ struct FundModelElement: Codable {
     let cnpj: String
     let fundModelDescription: Description
     let performanceVideos: [Video]
-    let quotaDate: String
     let benchmark: Benchmark
     let oramaStandard: Bool
     let slug: String
@@ -56,7 +55,6 @@ struct FundModelElement: Codable {
         case cnpj
         case fundModelDescription = "description"
         case performanceVideos = "performance_videos"
-        case quotaDate = "quota_date"
         case benchmark
         case oramaStandard = "orama_standard"
         case slug

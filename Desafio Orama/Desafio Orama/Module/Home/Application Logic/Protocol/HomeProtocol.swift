@@ -15,6 +15,7 @@ protocol HomePresenterInput {
     func refresh()
     func paginate()
     func didSelected(with index: Int)
+    func tapNavigation()
 }
 
 protocol HomePresenterOutput: class {

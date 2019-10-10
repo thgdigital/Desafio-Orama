@@ -51,6 +51,10 @@ class HomePresenter : HomePresenterInput {
     func viewWillAppear() {
         output?.setupLayout(title: "Lista de fundos")
     }
+    
+    func tapNavigation() {
+        wireframe.showMyList()
+     }
 }
 
 extension HomePresenter: HomeInteractorOutput {
